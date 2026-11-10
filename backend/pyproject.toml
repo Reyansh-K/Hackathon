@@ -1,0 +1,32 @@
+[project]
+name = "exhibit-a"
+version = "0.1.0"
+description = "AI digital forensics copilot with a tamper-evident chain of custody and cite-or-silence reporting."
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+  "anthropic>=2.7",
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "python-multipart>=0.0.9",
+  "pillow>=11",
+  "numpy>=2",
+  "networkx>=3.3",
+  "scikit-learn>=1.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "httpx>=0.27"]
+
+[project.scripts]
+exhibit-a = "exhibit_a.cli:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["exhibit_a*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

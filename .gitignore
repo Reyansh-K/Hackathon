@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+build/
+dist/
+
+# Case data produced at runtime (real evidence must never be committed)
+backend/data/
+data/
+
+# Secrets
+.env
+.env.*
+
+# Node / frontend
+node_modules/
+frontend/dist/
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
